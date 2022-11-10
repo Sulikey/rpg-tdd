@@ -6,5 +6,11 @@ export default class Wizzard {
     this.roll = 0;
   }
 
-  damage() {}
+  damage(num) {
+    if (this.health > num) {
+      this.health = this.health - num;
+    } else {
+      this.health = 0;
+    }
+  }
 }
