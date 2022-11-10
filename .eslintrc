@@ -16,7 +16,7 @@
       "warn",
       2
     ],
-    "no-console": "warn",
+    "no-console": 0,
     "no-unused-vars": [
       "warn",
       {

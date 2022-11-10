@@ -13,4 +13,8 @@ export default class Wizzard {
       this.health = 0;
     }
   }
+
+  rollDamage() {
+    this.roll = Math.floor(Math.random() * 6);
+  }
 }
