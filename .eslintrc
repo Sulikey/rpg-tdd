@@ -16,14 +16,14 @@
       "warn",
       2
     ],
-    "no-console": "warn"
-  },
-  "no-unused-vars": [
-    "warn",
-    {
-      "ignoreRestSiblings": true,
-      "destructuredArrayIgnorePattern": "[A-Z]",
-      "caughtErrors": "none"
-    }
-  ]
+    "no-console": "warn",
+    "no-unused-vars": [
+      "warn",
+      {
+        "ignoreRestSiblings": true,
+        "destructuredArrayIgnorePattern": "[A-Z]",
+        "caughtErrors": "none"
+      }
+    ]
+  }
 }
