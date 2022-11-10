@@ -5,19 +5,21 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
+  mode: "development",
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   devtool: 'eval-source-map',
   devServer: {               
-    contentBase: './dist'    
+    static: "./src/",
+    hot: true
   },
   plugins: [
     new ESLintPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Shape Tracker', // <------------------- Change Title To Match Project
+      title: 'rpg-tdd', // <------------------- Change Title To Match Project
       template: './src/index.html',
       inject: 'body'
     })
@@ -25,15 +27,20 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        test: /\.(gif|png|avif|jpe?g)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'src/Images/'
+            }
+          }
+        ]
       }
     ]
   }
