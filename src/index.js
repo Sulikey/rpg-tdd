@@ -63,9 +63,9 @@ function initPlayers() {
   game.players = [];
   let players = Array(game.players);
 
-  const wizardOne = new Wizard("hermione", 100);
+  const wizardOne = new Wizard("Hermione", 100);
   players.push(wizardOne);
-  const wizardTwo = new Wizard("voldemort", 90);
+  const wizardTwo = new Wizard("Lord Voldemort", 90);
   players.push(wizardTwo);
   game.players = players;
 }
